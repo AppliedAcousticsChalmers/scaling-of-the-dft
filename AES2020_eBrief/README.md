@@ -33,3 +33,7 @@ Script `fig_4_power_density_spectrum.m`:
 Fig. 4: Single-sided power spectral density ![|\underline{\overline{\overline{X}}}_\text{SS}(k)|](https://render.githubusercontent.com/render/math?math=%7C%5Cunderline%7B%5Coverline%7B%5Coverline%7BX%7D%7D%7D_%5Ctext%7BSS%7D(k)%7C)of the signal from Fig. 3 for different sampling frequencies ![f_\text{s}](https://render.githubusercontent.com/render/math?math=f_%5Ctext%7Bs%7D) and lengths ![N](https://render.githubusercontent.com/render/math?math=N). Left: ![f_\text{s} = 100](https://render.githubusercontent.com/render/math?math=f_%5Ctext%7Bs%7D%20%3D%20100) kHz, ![N = 25000](https://render.githubusercontent.com/render/math?math=N%20%3D%2025000). Right: ![f_\text{s} = 12.5](https://render.githubusercontent.com/render/math?math=f_%5Ctext%7Bs%7D%20%3D%2012.5) kHz, ![N = 12500](https://render.githubusercontent.com/render/math?math=N%20%3D%2012500).
 
 ![fig_4](fig_4.png "fig_4")
+
+---
+
+The inline math expressions were created with [A hack for showing LaTeX formulas in GitHub markdown.md](https://gist.github.com/a-rodin/fef3f543412d6e1ec5b6cf55bf197d7b). 

@@ -8,7 +8,7 @@ The MATLAB scripts in this folder recreate the figures from our paper
 
 Script [fig_1_unscaled_magnitude_spectrum.m](fig_1_unscaled_magnitude_spectrum.m):
 
-Fig 1: \\(\left\vert X(k)\right\vert\\) of a sine wave of frequency \\(f=1000\\) Hz and with amplitude \\(A=1\\) for \\(N=10^5\\) (left) and \\(N=2\cdot 10^5\\) (right).
+Fig 1: \\(\left\vert X(k)\right\vert\\) of a sine of frequency \\(f=1000\\) Hz and with amplitude \\(A=1\\) for \\(N=10^5\\) (left) and \\(N=2\cdot 10^5\\) (right).
 
 ![fig_1](fig_1.png "fig_1")
 
@@ -24,7 +24,7 @@ Fig 2: Illustration of single-sided amplitude spectra. The upper plot depicts \\
 
 Script [fig_3_single_sided_amplitude_spectrum_2.m](fig_3_single_sided_amplitude_spectrum_2.m):
 
-Fig. 3: Single-sided amplitude spectra \\(\left\vert \overline{X}_\text{SS}(k)\right\vert \\) on a logarithmic scale of a sine of amplitude 1 and implied unit V with additive white noise. \\(f_\text{s} = 100\\) kHz. Left: \\(N = 2\cdot 10^5\\). Right: \\(N = 2/8 \cdot 10^5\\).
+Fig. 3: Single-sided amplitude spectra $$\left\vert \overline{X}_\text{SS}(k)\right\vert $$ on a logarithmic scale of a sine of amplitude 1 and implied unit V with additive white noise. \\(f_\text{s} = 100\\) kHz. Left: \\(N = 2\cdot 10^5\\). Right: \\(N = 2/8 \cdot 10^5\\).
 
 ![fig_3](fig_3.png "fig_3")
 

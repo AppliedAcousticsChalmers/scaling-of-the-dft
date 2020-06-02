@@ -4,7 +4,7 @@
 
 <div style="text-align:center"><span><b>Jens Ahrens</b></span></div>
 
-<div style="text-align:center"><span>v. 2020-05-25</span></div>
+<div style="text-align:center"><span>v. 2020-05-25</span><p /></div>
 
 Please cite this document as 
 
@@ -14,7 +14,7 @@ Please cite this document as
 
 ## Abstract
 
-The following plots show the (unwindowed) single-sided Discrete Fourier Transform (DFT) amplitude spectra $$|\overline{X}_\text{SS}(k)|$$ of two sine waves of amplitude $$1$$. (Refer to [this article](https://appliedacousticschalmers.github.io/scaling-of-the-dft/AES2020_eBrief/) if you are unsure about what a single-sided amplitude spectrum is.)
+The following plots show the (unwindowed) single-sided Discrete Fourier Transform (DFT) amplitude spectra $$\vert \overline{X}_\text{SS}(k)\vert $$ of two sine waves of amplitude $$1$$. (Refer to [this article](https://appliedacousticschalmers.github.io/scaling-of-the-dft/AES2020_eBrief/) if you are unsure about what a single-sided amplitude spectrum is.)
 
 
 
@@ -22,7 +22,7 @@ The following plots show the (unwindowed) single-sided Discrete Fourier Transfor
 
 
 
-   Fig. 1<a name="fig1"></a>: Single-sided DFT amplitude spectra $$|\overline{X}_\text{SS}(k)|$$ of two sine waves of amplitude $$1$$ and frequency  $$1000~\mathrm{Hz}$$ (left) and $$1002.5~\mathrm{Hz}$$. The horizontal axis was converted from bin index $$k$$ to frequency in $$\mathrm{Hz}$$ as explained [here](https://appliedacousticschalmers.github.io/scaling-of-the-dft/AES2020_eBrief/README.md#sec:k).
+   Fig. 1<a name="fig1"></a>: Single-sided DFT amplitude spectra $$\vert \overline{X}_\text{SS}(k)\vert $$ of two sine waves of amplitude $$1$$ and frequency  $$1000~\mathrm{Hz}$$ (left) and $$1002.5~\mathrm{Hz}$$. The horizontal axis was converted from bin index $$k$$ to frequency in $$\mathrm{Hz}$$ as explained [here](https://appliedacousticschalmers.github.io/scaling-of-the-dft/AES2020_eBrief/README.md#sec:k).
 
 
 
@@ -32,7 +32,7 @@ Both sines were sampled at $$f_\textrm{s} = 10^5$$ Hz, and the length of the DFT
 
 ## Main Lobes and Side Lobes of Windows Revisited
 
-Let's look at the single-sided amplitude spectra $$|\overline{X}_\text{SS}(k)|$$ of two sine waves with a DFT length of $$N=101$$. See [this MATLAB script](main_lobes_rect.m). 
+Let's look at the single-sided amplitude spectra $$\vert \overline{X}_\text{SS}(k)\vert $$ of two sine waves with a DFT length of $$N=101$$. See [this MATLAB script](main_lobes_rect.m). 
 
 
 
@@ -40,7 +40,7 @@ Let's look at the single-sided amplitude spectra $$|\overline{X}_\text{SS}(k)|$$
 
 
 
-   Fig. 2<a name="fig2"></a>: Single-sided amplitude spectra $$|\overline{X}_\text{SS}(k)|$$ of two sines with a frequency that is equivalent to bin index $$k=10$$ (left) and $$k=10.4$$ (right).
+   Fig. 2<a name="fig2"></a>: Single-sided amplitude spectra $$\vert \overline{X}_\text{SS}(k)\vert $$ of two sines with a frequency that is equivalent to bin index $$k=10$$ (left) and $$k=10.4$$ (right).
 
 
 

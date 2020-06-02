@@ -2,7 +2,7 @@
 
 # Tutorial on Scaling of the Discrete Fourier Transform and the Implied Physical Units of the Spectra of Time-Discrete Signals
 
-<div style="text-align:center"><span><b>Jens Ahrens, Carl Andersson, Patrik Höstmad, Wolfgang Kropp</b></span></div>
+<div style="text-align:center"><span><b>Jens Ahrens, Carl Andersson, Patrik Höstmad, Wolfgang Kropp</b><p /></span></div>
 
 
 
@@ -98,7 +98,7 @@ the values of which are directly proportional to the power in each bin $$k$$ [^3
 
 
 [^1]: We speak of an implied unit as, strictly speaking, discrete signals do not have a physical unit. If $$x(n)$$ is the discrete representation of a physical signal $$x(t)$$, then we consider $$[x(t)]$$, the unit of $$x(t)$$, the _implied unit_ of $$x(n)$$.
-[^2]: Note that magnitude spectra are typically plotted on a logarithmic scale, i.e. $$20\log_{10}|X(k)|$$ when representing amplitude or $$10\log_{10}|X(k)|$$ when representing power or energy. We chose a linear scale here for ease of demonstration.
+[^2]: Note that magnitude spectra are typically plotted on a logarithmic scale, i.e. $$20\log_{10}\vert X(k)\vert $$ when representing amplitude or $$10\log_{10}\vert X(k)\vert$$ when representing power or energy. We chose a linear scale here for ease of demonstration.
 [^3]: With electrical signals, the power $$P$$ is obtained as $$P=U^2/R$$, with $$U$$ being the effective (RMS) voltage and $$R$$ being a resistance. The RMS spectrum $$\overline{X}_\text{RMS}(k)$$ is defined in \eqref{eq:rms_spectrum}, and its square is directly proportional to $$\overline{\overline{X}}(k)$$ via \eqref{eq:single-sided}.
 
 
@@ -111,7 +111,7 @@ The most important alternative to amplitude and power spectra is the _power spec
 
 $$
 \tag{6}\label{eq:power_spectral_density}
-\underline{\overline{\overline{X}}}(k) = \frac{N}{f_\text{s}} \overline{\overline{X}}(k) = \frac{N}{f_\text{s}}|\overline{X}(k)|^2 = \frac{1}{f_\text{s} N} |X(k)|^2
+\underline{\overline{\overline{X}}}(k) = \frac{N}{f_\text{s}} \overline{\overline{X}}(k) = \frac{N}{f_\text{s}}\vert\overline{X}(k)\vert^2 = \frac{1}{f_\text{s} N} \vert X(k)\vert^2
 $$
 
 with the implied unit $$\mathrm{V}^2/\mathrm{Hz}$$. The PSD is the power spectrum \eqref{eq:power_spectrum} divided by the frequency resolution $$f_\text{s}/N$$. Consider a continuous broadband signal that is sampled at different sample rates but with the same number of samples. At a lower sample rate, each bin represents a narrower frequency band so that the magnitude of the power spectrum will be lower. The PSD compensates for this.
@@ -222,7 +222,7 @@ $$
     \underline{\overline{\overline{X}}}_w(k) &= \frac{1}{f_\text{s} \sum_n w^2(n)} |X_w(k)|^2
 \end{align}
 $$
-where $$X_w(k)$$ is the DFT of $$x(n)\cdot w(n)$$. Simply put, the factors $$N$$ in \eqref{eq:amplitude_spectrum} and \eqref{eq:power_spectrum} are replaced by the sum $$\sum_n w(n)$$ of the window samples, and the factor $$N$$ in the last equality in \eqref{eq:power_spectral_density} is replaced by the sum $$\sum_n w^2(n)$$ of the squared window samples. Eq. \eqref{eq:window_scaling_1} simplifies to $\eqref{eq:amplitude_spectrum} for the case of $$w(n) = 1$$, \eqref{eq:window_scaling_3} to \eqref{eq:power_spectrum}, and \eqref{eq:window_scaling_4} to \eqref{eq:power_spectral_density}.
+where $$X_w(k)$$ is the DFT of $$x(n)\cdot w(n)$$. Simply put, the factors $$N$$ in \eqref{eq:amplitude_spectrum} and \eqref{eq:power_spectrum} are replaced by the sum $$\sum_n w(n)$$ of the window samples, and the factor $$N$$ in the last equality in \eqref{eq:power_spectral_density} is replaced by the sum $$\sum_n w^2(n)$$ of the squared window samples. Eq. \eqref{eq:window_scaling_1} simplifies to \eqref{eq:amplitude_spectrum} for the case of $$w(n) = 1$$, \eqref{eq:window_scaling_3} to \eqref{eq:power_spectrum}, and \eqref{eq:window_scaling_4} to \eqref{eq:power_spectral_density}.
 
 
 

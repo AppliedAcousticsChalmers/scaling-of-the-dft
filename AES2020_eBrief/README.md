@@ -232,7 +232,7 @@ where $$X_w(k)$$ is the DFT of $$x(n)\cdot w(n)$$. Simply put, the factors $$N$$
 A complex number $$z$$ may be represented either as real and imaginary parts $$\Re\{z\}$$ and $$\Im\{z\}$$ or as magnitude $$|z|$$ and phase $$\angle z$$ as
 $$
 \tag{14}
-z = \Re\{z\} + {\mathrm i} \Im\{z\} = |z| \cdot {\mathrm e}^{{\mathrm i} \angle z} \ .
+z = \Re\{z\} + {\mathrm i} \Im\{z\} = |z| \cdot {\mathrm e}^{ {\mathrm i} \angle z} \ .
 $$
 Since the complex exponential is dimensionless, $$\Re\{z\}$$, $$\Im\{z\}$$, and $$|z|$$ carry the same physical unit that is determined from the type of spectrum that $$z$$ is part of.
 

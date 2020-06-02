@@ -90,7 +90,7 @@ yields an _amplitude spectrum_, i.e. a spectrum $$X(\omega)$$ whose implied unit
 The square of this spectrum constitutes a _power spectrum_, 
 $$
 \tag{5}\label{eq:power_spectrum}
-\overline{\overline{X}}(k) = |\overline{X}(k)|^2 = \frac{1}{N^2} |X(k)|^2
+\overline{\overline{X}}(k) = \vert\overline{X}(k)\vert^2 = \frac{1}{N^2} \vert X(k)\vert^2
 $$
 
 the values of which are directly proportional to the power in each bin $$k$$ [^3]. This means that the power of each of the discrete tones in a signal is represented by $$\overline{\overline{X}}(k)$$ (if the energy of each discrete tone is confined to one bin). Assuming the implied unit of $$x(t)$$ is $$\mathrm{V}$$, then the implied unit of $$\overline{\overline{X}}(k)$$ is $$\mathrm{V}^2$$. 
@@ -191,9 +191,9 @@ $$
 \tag{9}
 \overline{\overline{X}}_\text{SS}(k) = 
     \begin{cases}
-    \frac{1}{2} |\overline{X}_\text{SS}(k)|^2 
+    \frac{1}{2} \vert\overline{X}_\text{SS}(k)\vert^2 
     \quad\forall 0 < k < \frac{N}{2}\\
-    \ \ \, |\overline{X}_\text{SS}(k)|^2 
+    \ \ \, \vert\overline{X}_\text{SS}(k)\vert^2 
     \quad\forall k =0, k = \frac{N}{2} 
     \end{cases}
 $$
@@ -210,7 +210,7 @@ $$
     \end{cases} \ \ .
 $$
 
-We term $$\overline{X}_\text{RMS}(k)$$ _RMS spectrum_. It represents the RMS amplitudes of the discrete tones in the signal, and $$\overline{\overline{X}}_\text{SS}(k) = |\overline{X}_\text{RMS}(k)|^2$$ holds. A similar definition can be established for an RMS density spectrum $$\underline{\overline{X}}_\text{RMS}(k)$$. Note that RMS-spectra are inherently single sided and have no equivalent double-sided representation.
+We term $$\overline{X}_\text{RMS}(k)$$ _RMS spectrum_. It represents the RMS amplitudes of the discrete tones in the signal, and $$\overline{\overline{X}}_\text{SS}(k) = \vert \overline{X}_\text{RMS}(k)\vert^2$$ holds. A similar definition can be established for an RMS density spectrum $$\underline{\overline{X}}_\text{RMS}(k)$$. Note that RMS-spectra are inherently single sided and have no equivalent double-sided representation.
 
 
 
@@ -223,8 +223,8 @@ $$
 \begin{align}
 \tag{11}\label{eq:window_scaling_1}
     \overline{X}_w(k) &= \frac{1}{\sum_n w(n)} X_w(k)  \\ \tag{12}\label{eq:window_scaling_3}
-    \overline{\overline{X}}_w(k) &= \frac{1}{(\sum_n w(n))^2} |X_w(k)|^2 \\ \tag{13}\label{eq:window_scaling_4}
-    \underline{\overline{\overline{X}}}_w(k) &= \frac{1}{f_\text{s} \sum_n w^2(n)} |X_w(k)|^2
+    \overline{\overline{X}}_w(k) &= \frac{1}{(\sum_n w(n))^2} \vert X_w(k)\vert^2 \\ \tag{13}\label{eq:window_scaling_4}
+    \underline{\overline{\overline{X}}}_w(k) &= \frac{1}{f_\text{s} \sum_n w^2(n)} \vert X_w(k)\vert^2
 \end{align}
 $$
 
@@ -235,14 +235,14 @@ where $$X_w(k)$$ is the DFT of $$x(n)\cdot w(n)$$. Simply put, the factors $$N$$
 
 ## 5  Other Remarks
 
-A complex number $$z$$ may be represented either as real and imaginary parts $$\Re\{z\}$$ and $$\Im\{z\}$$ or as magnitude $$|z|$$ and phase $$\angle z$$ as
+A complex number $$z$$ may be represented either as real and imaginary parts $$\Re\{z\}$$ and $$\Im\{z\}$$ or as magnitude $$\vert z\vert$$ and phase $$\angle z$$ as
 
 $$
 \tag{14}
-z = \Re\{z\} + {\mathrm i} \Im\{z\} = |z| \cdot {\mathrm e}^{ {\mathrm i} \angle z} \ .
+z = \Re\{z\} + {\mathrm i} \Im\{z\} = \vert z\vert \cdot {\mathrm e}^{ {\mathrm i} \angle z} \ .
 $$
 
-Since the complex exponential is dimensionless, $$\Re\{z\}$$, $$\Im\{z\}$$, and $$|z|$$ carry the same physical unit that is determined from the type of spectrum that $$z$$ is part of.
+Since the complex exponential is dimensionless, $$\Re\{z\}$$, $$\Im\{z\}$$, and $$\vert z\vert$$ carry the same physical unit that is determined from the type of spectrum that $$z$$ is part of.
 
 The transfer function $$H(k)$$ of a system can be represented as the ratio of output and input spectra as $$H(k) = Y(k) / X(k)$$. Any scaling of $$Y(k)$$ and $$X(k)$$ will cancel out. Regarding the units, $$[H(k)] = [Y(k)] / [X(k)]$$ holds so that $$H(k)$$ is dimensionless if $$[Y(k)] = [X(k)]$$. Similar considerations hold of the impulse response. Note that the magnitude of the unscaled spectrum of an impulse with amplitude 1 is always 1 independent of $$N$$.
 
@@ -276,21 +276,21 @@ The RMS $$x_\text{RMS}$$ of a discrete time domain signal $$x(n)$$ is given by
 
 $$
 \tag{16}\label{eq:rms_t}
-    x_\text{RMS}=\sqrt{\frac{1}{N}\sum_{n=0}^{N-1} |x(n)|^2} \ .
+    x_\text{RMS}=\sqrt{\frac{1}{N}\sum_{n=0}^{N-1} \vert x(n)\vert^2} \ .
 $$
 
 Inserting Parseval's theorem given by
 
 $$
 \tag{17}\label{eq:parseval}
-    \sum_{n=0}^{N-1} |x(n)|^2 = \frac{1}{N} \sum_{k=0}^{N-1} |X(k)|^2
+    \sum_{n=0}^{N-1}  \vert x(n)\vert^2 = \frac{1}{N} \sum_{k=0}^{N-1} \vert X(k)\vert^2
 $$
 
 into \eqref{eq:rms_t} allows for computing the RMS from the spectrum $$X(k)$$ as
 
 $$
 \tag{18}\label{eq:rms_f}
-    x_\text{RMS}=\sqrt{\frac{1}{N^2}\sum_{n=0}^{N-1} |X(k)|^2} \ \ .
+    x_\text{RMS}=\sqrt{\frac{1}{N^2}\sum_{n=0}^{N-1} \vert X(k)\vert^2} \ \ .
 $$
 
 

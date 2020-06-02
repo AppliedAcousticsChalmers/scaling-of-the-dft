@@ -1,3 +1,5 @@
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
 # Some Notes on Windows in Spectral Analysis
 
 <div style="text-align:center"><span><b>Jens Ahrens</b></span></div>

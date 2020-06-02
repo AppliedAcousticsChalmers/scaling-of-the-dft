@@ -41,7 +41,7 @@ $$
 
 $$x(t)$$ is a purely real signal that is dependent on time, $$\omega = 2\pi f$$ is the angular frequency, $$f$$ is the frequency in $$\mathrm{Hz}=\mathrm{s}^{-1}$$, and $$t$$ is time in $$\mathrm{s}$$. $$X(\omega)$$ is termed the spectrum of $$x(t)$$. Note that above example represents a CFT over time. CFT over space exists, too [[5](#[5])].
 
-Let us assume that $$x(t)$$ in $\eqref{eq:cft}$ represents a microphone signal in V. In terms of the units, the complex exponential is dimensionless (i.e., it has unit 1, or no unit in other words), and it is easy to show that integration over $$t$$ results in multiplying with s, the unit of $$t$$. The spectrum $$X(\omega)$$ is therefore given in the unit of
+Let us assume that $$x(t)$$ in \eqref{eq:cft} represents a microphone signal in V. In terms of the units, the complex exponential is dimensionless (i.e., it has unit 1, or no unit in other words), and it is easy to show that integration over $$t$$ results in multiplying with s, the unit of $$t$$. The spectrum $$X(\omega)$$ is therefore given in the unit of
 
 $$
 \tag{2}
@@ -62,13 +62,13 @@ $$
     X(k) = \sum_{n=0}^{N-1} x(n) \ {\mathrm e}^{-{\mathrm i} \frac{2\pi k}{N}n}
 $$
 
-$$x(n)$$ is a signal that is dependent on the integer time index $$n$$. One also speaks of $$x(n)$$ as the signal at _tap_ $$n$$. $$k$$ is the integer frequency index also known as _bin_. Other definitions exist that differ only with respect to a normalization constant and/or the sign of the exponent. Eq. $\eqref{eq:dft}$ appears to be the most widely used definition of the DFT and is also used by MATLAB and Python.
+$$x(n)$$ is a signal that is dependent on the integer time index $$n$$. One also speaks of $$x(n)$$ as the signal at _tap_ $$n$$. $$k$$ is the integer frequency index also known as _bin_. Other definitions exist that differ only with respect to a normalization constant and/or the sign of the exponent. Eq. \eqref{eq:dft} appears to be the most widely used definition of the DFT and is also used by MATLAB and Python.
 
 
 
 ### 3.1  Scaling of DFT Spectra of Discrete Tones
 
-A continuous signal $$x(t)$$ that is composed of discrete tones is characterized primarily by the amplitude and phase of each of the tones. A first property of $$X(k)$$ that we notice is that $$|X(k)|$$ is directly proportional to $$N$$, which is undesired in most situations (cf. Fig. [1](#fig1)). It is preferable to scale the spectrum such that the amplitudes of said tones are apparent. Compensating for the total number of samples as
+A continuous signal $$x(t)$$ that is composed of discrete tones is characterized primarily by the amplitude and phase of each of the tones. A first property of $$X(k)$$ that we notice is that $$\vert X(k)\vert $$ is directly proportional to $$N$$, which is undesired in most situations (cf. Fig. [1](#fig1)). It is preferable to scale the spectrum such that the amplitudes of said tones are apparent. Compensating for the total number of samples as
 
 $$
 \tag{4}\label{eq:amplitude_spectrum}
@@ -83,7 +83,7 @@ yields an _amplitude spectrum_, i.e. a spectrum $$X(\omega)$$ whose implied unit
 
 
 
-   Fig. 1<a name="fig1"></a>: $$|X(k)|$$ of a sine wave of frequency $$f=1000~\mathrm{Hz}$$ and with amplitude $$A=1$$ for $$N=1\cdot 10^5$$ (left) and $$N=2\cdot 10^5$$ (right)[^2]. The horizontal axis was converted from bin index $$k$$ to frequency in Hz as explained in Appendix [A](#sec:k). See [this](fig_1_unscaled_magnitude_spectrum.m) MATLAB script.
+   Fig. 1<a name="fig1"></a>: $$\vert X(k)\vert $$ of a sine wave of frequency $$f=1000~\mathrm{Hz}$$ and with amplitude $$A=1$$ for $$N=1\cdot 10^5$$ (left) and $$N=2\cdot 10^5$$ (right)[^2]. The horizontal axis was converted from bin index $$k$$ to frequency in Hz as explained in Appendix [A](#sec:k). See [this](fig_1_unscaled_magnitude_spectrum.m) MATLAB script.
 
 
 
@@ -99,7 +99,7 @@ the values of which are directly proportional to the power in each bin $$k$$ [^3
 
 [^1]: We speak of an implied unit as, strictly speaking, discrete signals do not have a physical unit. If $$x(n)$$ is the discrete representation of a physical signal $$x(t)$$, then we consider $$[x(t)]$$, the unit of $$x(t)$$, the _implied unit_ of $$x(n)$$.
 [^2]: Note that magnitude spectra are typically plotted on a logarithmic scale, i.e. $$20\log_{10}|X(k)|$$ when representing amplitude or $$10\log_{10}|X(k)|$$ when representing power or energy. We chose a linear scale here for ease of demonstration.
-[^3]: With electrical signals, the power $$P$$ is obtained as $$P=U^2/R$$, with $$U$$ being the effective (RMS) voltage and $$R$$ being a resistance. The RMS spectrum $$\overline{X}_\text{RMS}(k)$$ is defined in $\eqref{eq:rms_spectrum}$, and its square is directly proportional to $$\overline{\overline{X}}(k)$$ via $\eqref{eq:single-sided}$.
+[^3]: With electrical signals, the power $$P$$ is obtained as $$P=U^2/R$$, with $$U$$ being the effective (RMS) voltage and $$R$$ being a resistance. The RMS spectrum $$\overline{X}_\text{RMS}(k)$$ is defined in \eqref{eq:rms_spectrum}, and its square is directly proportional to $$\overline{\overline{X}}(k)$$ via \eqref{eq:single-sided}.
 
 
 
@@ -114,16 +114,16 @@ $$
 \underline{\overline{\overline{X}}}(k) = \frac{N}{f_\text{s}} \overline{\overline{X}}(k) = \frac{N}{f_\text{s}}|\overline{X}(k)|^2 = \frac{1}{f_\text{s} N} |X(k)|^2
 $$
 
-with the implied unit $$\mathrm{V}^2/\mathrm{Hz}$$. The PSD is the power spectrum $\eqref{eq:power_spectrum}$ divided by the frequency resolution $$f_\text{s}/N$$. Consider a continuous broadband signal that is sampled at different sample rates but with the same number of samples. At a lower sample rate, each bin represents a narrower frequency band so that the magnitude of the power spectrum will be lower. The PSD compensates for this.
+with the implied unit $$\mathrm{V}^2/\mathrm{Hz}$$. The PSD is the power spectrum \eqref{eq:power_spectrum} divided by the frequency resolution $$f_\text{s}/N$$. Consider a continuous broadband signal that is sampled at different sample rates but with the same number of samples. At a lower sample rate, each bin represents a narrower frequency band so that the magnitude of the power spectrum will be lower. The PSD compensates for this.
 
 
-It is also possible to create an amplitude density spectrum like $\eqref{eq:cft}$. However, the usefulness of this with discrete signals is not obvious.
+It is also possible to create an amplitude density spectrum like \eqref{eq:cft}. However, the usefulness of this with discrete signals is not obvious.
 
 
 
 ### 3.3  Single-Sided and Double-Sided Spectra<a name="sec:single-sided"></a>
 
-When computing $$X(k)$$ in $\eqref{eq:dft}$ for a sufficient range of $$k$$, one finds that $$X(k)$$ is periodic with a period equal to the length $$N$$ of the signal $$x(n)$$. When $$x(n)$$ is purely real - as it is the case with most audio-related scenarios - then $$X(k)$$ exhibits certain symmetries with respect to $$k$$ that allow for concluding that some of the values of $$X(k)$$ inside one period are redundant and may be removed from the representation. 
+When computing $$X(k)$$ in \eqref{eq:dft} for a sufficient range of $$k$$, one finds that $$X(k)$$ is periodic with a period equal to the length $$N$$ of the signal $$x(n)$$. When $$x(n)$$ is purely real - as it is the case with most audio-related scenarios - then $$X(k)$$ exhibits certain symmetries with respect to $$k$$ that allow for concluding that some of the values of $$X(k)$$ inside one period are redundant and may be removed from the representation. 
 
 It is helpful in many situations -- such as the context of this paper -- to convert the (symmetric) double-sided spectrum, i.e., $$X(k)$$ for a given range of length $$N$$ of $$k$$ to a single-sided spectrum $$X_\text{SS}(k)$$ that contains only non-redundant values. To account for the change of representation through omitting non-redundant values, we multiply all values of $$X(k)$$ that represent a pair of a value of $$X(k)$$ as well as a redundant value by 2. 
 
@@ -147,9 +147,9 @@ $$
     \end{cases}
 $$
 
-Note that for odd $$N$$, all bins other than $$k=0$$ have to be multiplied with 2. The single-sided representations of $$\overline{X}(k)$$, $$\underline{\overline{X}}(k)$$, $$\overline{\overline{X}}(k)$$, and $$\underline{\overline{\overline{X}}}(k)$$ are obtained equivalently to $\eqref{eq:single-sided}$. 
+Note that for odd $$N$$, all bins other than $$k=0$$ have to be multiplied with 2. The single-sided representations of $$\overline{X}(k)$$, $$\underline{\overline{X}}(k)$$, $$\overline{\overline{X}}(k)$$, and $$\underline{\overline{\overline{X}}}(k)$$ are obtained equivalently to \eqref{eq:single-sided}. 
 
-To highlight the usefulness of the single-sided representation, Fig. [2](#fig2) depicts the single-sided amplitude spectrum $$|\overline{X}_\text{SS}(k)|$$ (cf. $\eqref{eq:amplitude_spectrum}$) of a signal $$x(n)$$ that represents a pure sine wave with amplitude $$1~\mathrm{V}$$ and an amplitude offset (DC) of $$1~\mathrm{V}$$. The amplitude of the sine wave as well as and the DC can be directly deduced from $$|\overline{X}_\text{SS}(k)|$$.
+To highlight the usefulness of the single-sided representation, Fig. [2](#fig2) depicts the single-sided amplitude spectrum $$\vert \overline{X}_\text{SS}(k)\vert $$ (cf. \eqref{eq:amplitude_spectrum}) of a signal $$x(n)$$ that represents a pure sine wave with amplitude $$1~\mathrm{V}$$ and an amplitude offset (DC) of $$1~\mathrm{V}$$. The amplitude of the sine wave as well as and the DC can be directly deduced from $$\vert \overline{X}_\text{SS}(k)\vert $$.
 
 
 
@@ -157,7 +157,7 @@ To highlight the usefulness of the single-sided representation, Fig. [2](#fig2) 
 
 
 
-   Fig. 2<a name="fig2"></a>: Illustration of single-sided amplitude spectra. The upper plot depicts $$x(n)$$, a sine wave of frequency $$f=1000$$ Hz, with amplitude $$A=1~\mathrm{V}$$, and a DC of $$1~\mathrm{V}$$. The lower plot depicts $$|\overline{X}_\text{SS}(k)|$$. See [this](fig_2_single_sided_amplitude_spectrum_1.m) MATLAB script.
+   Fig. 2<a name="fig2"></a>: Illustration of single-sided amplitude spectra. The upper plot depicts $$x(n)$$, a sine wave of frequency $$f=1000$$ Hz, with amplitude $$A=1~\mathrm{V}$$, and a DC of $$1~\mathrm{V}$$. The lower plot depicts $$\vert \overline{X}_\text{SS}(k)\vert $$. See [this](fig_2_single_sided_amplitude_spectrum_1.m) MATLAB script.
 
 
 
@@ -169,7 +169,7 @@ However, the picture is very different when interpreting amplitude spectra of br
 
 
 
-   Fig. 3<a name="fig3"></a>: Single-sided amplitude spectra $$|\overline{X}_\text{SS}(k)|$$ on a logarithmic scale of a sine of amplitude 1 and implied unit $$\mathrm{V}$$ with additive white noise. $$f_\text{s} = 100~\mathrm{kHz}$$. Left: $$N = 2\cdot 10^5$$. Right: $$N = 2/8 \cdot 10^5$$. See [this](fig_3_single_sided_amplitude_spectrum_2.m) MATLAB script.
+   Fig. 3<a name="fig3"></a>: Single-sided amplitude spectra $$\vert \overline{X}_\text{SS}(k)\vert $$ on a logarithmic scale of a sine of amplitude 1 and implied unit $$\mathrm{V}$$ with additive white noise. $$f_\text{s} = 100~\mathrm{kHz}$$. Left: $$N = 2\cdot 10^5$$. Right: $$N = 2/8 \cdot 10^5$$. See [this](fig_3_single_sided_amplitude_spectrum_2.m) MATLAB script.
 
 
 
@@ -181,11 +181,11 @@ When the analysis of the noise in the signal from Fig. [3](#fig3) is of interest
 
 
 
-   Fig. 4<a name="fig4"></a>: Single-sided power spectral density $$|\underline{\overline{\overline{X}}}_\text{SS}(k)|$$ of the signal from Fig. [3](#fig3) for different sampling frequencies $$f_\text{s}$$ and lengths $$N$$. Left: $$f_\text{s} = 100~\mathrm{kHz}$$, $$N = 25000$$. Right: $$f_\text{s} = 12.5~\mathrm{kHz}$$, $$N = 12500$$. See [this](fig_4_power_density_spectrum.m) MATLAB script.
+   Fig. 4<a name="fig4"></a>: Single-sided power spectral density $$\vert \underline{\overline{\overline{X}}}_\text{SS}(k)\vert $$ of the signal from Fig. [3](#fig3) for different sampling frequencies $$f_\text{s}$$ and lengths $$N$$. Left: $$f_\text{s} = 100~\mathrm{kHz}$$, $$N = 25000$$. Right: $$f_\text{s} = 12.5~\mathrm{kHz}$$, $$N = 12500$$. See [this](fig_4_power_density_spectrum.m) MATLAB script.
 
 
 
-Note that while $$\overline{\overline{X}}(k) = |\overline{X}(k)|^2$$ (Eq. $\eqref{eq:power_spectrum}$) holds for double-sided power spectra, this relation reads
+Note that while $$\overline{\overline{X}}(k) = \vert \overline{X}(k)\vert^2$$ (Eq. \eqref{eq:power_spectrum}) holds for double-sided power spectra, this relation reads
 $$
 \tag{9}
 \overline{\overline{X}}_\text{SS}(k) = 
@@ -213,7 +213,7 @@ We term $$\overline{X}_\text{RMS}(k)$$ _RMS spectrum_. It represents the RMS amp
 
 ## 4  Windowing
 
-It is common in spectral analysis of discrete signals to apply a window $$w(n)$$ to the signal before the DFT in $\eqref{eq:dft}$. This needs to be taken into account in the scaling of the spectra, which has be performed differently for tonal signals as in Sec. [3.1](#sec:scaling_tones) and for broadband signals as in Sec. [3.2](#sec:scaling_broadband):
+It is common in spectral analysis of discrete signals to apply a window $$w(n)$$ to the signal before the DFT in \eqref{eq:dft}. This needs to be taken into account in the scaling of the spectra, which has be performed differently for tonal signals as in Sec. [3.1](#sec:scaling_tones) and for broadband signals as in Sec. [3.2](#sec:scaling_broadband):
 $$
 \begin{align}
 \tag{11}\label{eq:window_scaling_1}
@@ -222,7 +222,7 @@ $$
     \underline{\overline{\overline{X}}}_w(k) &= \frac{1}{f_\text{s} \sum_n w^2(n)} |X_w(k)|^2
 \end{align}
 $$
-where $$X_w(k)$$ is the DFT of $$x(n)\cdot w(n)$$. Simply put, the factors $$N$$ in $\eqref{eq:amplitude_spectrum}$ and $\eqref{eq:power_spectrum}$ are replaced by the sum $$\sum_n w(n)$$ of the window samples, and the factor $$N$$ in the last equality in $\eqref{eq:power_spectral_density}$ is replaced by the sum $$\sum_n w^2(n)$$ of the squared window samples. Eq. $\eqref{eq:window_scaling_1}$ simplifies to $\eqref{eq:amplitude_spectrum}$ for the case of $$w(n) = 1$$, $\eqref{eq:window_scaling_3}$ to $\eqref{eq:power_spectrum}$, and $\eqref{eq:window_scaling_4}$ to $\eqref{eq:power_spectral_density}$.
+where $$X_w(k)$$ is the DFT of $$x(n)\cdot w(n)$$. Simply put, the factors $$N$$ in \eqref{eq:amplitude_spectrum} and \eqref{eq:power_spectrum} are replaced by the sum $$\sum_n w(n)$$ of the window samples, and the factor $$N$$ in the last equality in \eqref{eq:power_spectral_density} is replaced by the sum $$\sum_n w^2(n)$$ of the squared window samples. Eq. \eqref{eq:window_scaling_1} simplifies to $\eqref{eq:amplitude_spectrum} for the case of $$w(n) = 1$$, \eqref{eq:window_scaling_3} to \eqref{eq:power_spectrum}, and \eqref{eq:window_scaling_4} to \eqref{eq:power_spectral_density}.
 
 
 
@@ -251,13 +251,13 @@ The combination of scaling and the single-sided representation of the DFT spectr
 ### A  The Relation Between Bin Index and Frequency<a name="sec:k"></a>
 
 
-When taking the into account with what frequency $$f_\text{s}$$ a previously time-continuous signal was sampled, then it is possible to relate the bin index $$k$$ in $\eqref{eq:dft}$ to a frequency $$f(k)$$ in Hz that represents the center frequency of the bin as
+When taking the into account with what frequency $$f_\text{s}$$ a previously time-continuous signal was sampled, then it is possible to relate the bin index $$k$$ in \eqref{eq:dft} to a frequency $$f(k)$$ in Hz that represents the center frequency of the bin as
 
 $$
 \tag{15}\label{eq:k}
     f(k) = \frac{k}{N}\cdot f_\text{s}  \ \ \ \forall \ 0 \leq k \leq N/2 \, .
 $$
-Eq. $\eqref{eq:k}$ was used in all figures in this paper that depict spectra to express the horizontal axis in Hz.
+Eq. \eqref{eq:k} was used in all figures in this paper that depict spectra to express the horizontal axis in Hz.
 
 
 
@@ -274,7 +274,7 @@ $$
 \tag{17}\label{eq:parseval}
     \sum_{n=0}^{N-1} |x(n)|^2 = \frac{1}{N} \sum_{k=0}^{N-1} |X(k)|^2
 $$
-into $\eqref{eq:rms_t}$ allows for computing the RMS from the spectrum $$X(k)$$ as
+into \eqref{eq:rms_t} allows for computing the RMS from the spectrum $$X(k)$$ as
 $$
 \tag{18}\label{eq:rms_f}
     x_\text{RMS}=\sqrt{\frac{1}{N^2}\sum_{n=0}^{N-1} |X(k)|^2} \ \ .

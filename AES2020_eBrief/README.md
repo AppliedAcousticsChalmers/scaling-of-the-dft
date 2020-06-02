@@ -186,6 +186,7 @@ When the analysis of the noise in the signal from Fig. [3](#fig3) is of interest
 
 
 Note that while $$\overline{\overline{X}}(k) = \vert \overline{X}(k)\vert^2$$ (Eq. \eqref{eq:power_spectrum}) holds for double-sided power spectra, this relation reads
+
 $$
 \tag{9}
 \overline{\overline{X}}_\text{SS}(k) = 
@@ -196,7 +197,9 @@ $$
     \quad\forall k =0, k = \frac{N}{2} 
     \end{cases}
 $$
+
 for single-sided spectra (and similarly for the PSD). This can be interpreted in terms of the crest factor of sine waves of $$\sqrt{2}$$, i.e., the ratio of maximum value (in the case of sine waves the amplitude) to root-mean-square (RMS, cf. App. [B](#sec:rms). For $$0 < k < \frac{N}{2}$$, the RMS of the signal at each bin is obtained by dividing the magnitude of the amplitude spectrum by $$\sqrt{2}$$ as the basis functions of the DFT may be interpreted as sine waves:
+
 $$
 \tag{10}\label{eq:rms_spectrum}
     \overline{X}_\text{RMS}(k) = \begin{cases}
@@ -206,6 +209,7 @@ $$
     \quad\forall k =0, k = \frac{N}{2}
     \end{cases} \ \ .
 $$
+
 We term $$\overline{X}_\text{RMS}(k)$$ _RMS spectrum_. It represents the RMS amplitudes of the discrete tones in the signal, and $$\overline{\overline{X}}_\text{SS}(k) = |\overline{X}_\text{RMS}(k)|^2$$ holds. A similar definition can be established for an RMS density spectrum $$\underline{\overline{X}}_\text{RMS}(k)$$. Note that RMS-spectra are inherently single sided and have no equivalent double-sided representation.
 
 
@@ -214,6 +218,7 @@ We term $$\overline{X}_\text{RMS}(k)$$ _RMS spectrum_. It represents the RMS amp
 ## 4  Windowing
 
 It is common in spectral analysis of discrete signals to apply a window $$w(n)$$ to the signal before the DFT in \eqref{eq:dft}. This needs to be taken into account in the scaling of the spectra, which has be performed differently for tonal signals as in Sec. [3.1](#sec:scaling_tones) and for broadband signals as in Sec. [3.2](#sec:scaling_broadband):
+
 $$
 \begin{align}
 \tag{11}\label{eq:window_scaling_1}
@@ -222,6 +227,7 @@ $$
     \underline{\overline{\overline{X}}}_w(k) &= \frac{1}{f_\text{s} \sum_n w^2(n)} |X_w(k)|^2
 \end{align}
 $$
+
 where $$X_w(k)$$ is the DFT of $$x(n)\cdot w(n)$$. Simply put, the factors $$N$$ in \eqref{eq:amplitude_spectrum} and \eqref{eq:power_spectrum} are replaced by the sum $$\sum_n w(n)$$ of the window samples, and the factor $$N$$ in the last equality in \eqref{eq:power_spectral_density} is replaced by the sum $$\sum_n w^2(n)$$ of the squared window samples. Eq. \eqref{eq:window_scaling_1} simplifies to \eqref{eq:amplitude_spectrum} for the case of $$w(n) = 1$$, \eqref{eq:window_scaling_3} to \eqref{eq:power_spectrum}, and \eqref{eq:window_scaling_4} to \eqref{eq:power_spectral_density}.
 
 
@@ -230,10 +236,12 @@ where $$X_w(k)$$ is the DFT of $$x(n)\cdot w(n)$$. Simply put, the factors $$N$$
 ## 5  Other Remarks
 
 A complex number $$z$$ may be represented either as real and imaginary parts $$\Re\{z\}$$ and $$\Im\{z\}$$ or as magnitude $$|z|$$ and phase $$\angle z$$ as
+
 $$
 \tag{14}
 z = \Re\{z\} + {\mathrm i} \Im\{z\} = |z| \cdot {\mathrm e}^{ {\mathrm i} \angle z} \ .
 $$
+
 Since the complex exponential is dimensionless, $$\Re\{z\}$$, $$\Im\{z\}$$, and $$|z|$$ carry the same physical unit that is determined from the type of spectrum that $$z$$ is part of.
 
 The transfer function $$H(k)$$ of a system can be represented as the ratio of output and input spectra as $$H(k) = Y(k) / X(k)$$. Any scaling of $$Y(k)$$ and $$X(k)$$ will cancel out. Regarding the units, $$[H(k)] = [Y(k)] / [X(k)]$$ holds so that $$H(k)$$ is dimensionless if $$[Y(k)] = [X(k)]$$. Similar considerations hold of the impulse response. Note that the magnitude of the unscaled spectrum of an impulse with amplitude 1 is always 1 independent of $$N$$.
@@ -265,16 +273,21 @@ Eq. \eqref{eq:k} was used in all figures in this paper that depict spectra to ex
 
 
 The RMS $$x_\text{RMS}$$ of a discrete time domain signal $$x(n)$$ is given by
+
 $$
 \tag{16}\label{eq:rms_t}
     x_\text{RMS}=\sqrt{\frac{1}{N}\sum_{n=0}^{N-1} |x(n)|^2} \ .
 $$
+
 Inserting Parseval's theorem given by
+
 $$
 \tag{17}\label{eq:parseval}
     \sum_{n=0}^{N-1} |x(n)|^2 = \frac{1}{N} \sum_{k=0}^{N-1} |X(k)|^2
 $$
+
 into \eqref{eq:rms_t} allows for computing the RMS from the spectrum $$X(k)$$ as
+
 $$
 \tag{18}\label{eq:rms_f}
     x_\text{RMS}=\sqrt{\frac{1}{N^2}\sum_{n=0}^{N-1} |X(k)|^2} \ \ .

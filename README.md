@@ -6,7 +6,7 @@
 
 
 
-<div style="text-align:center"><span>Please make sure that you read this on <a href="https://appliedacousticschalmers.github.io/scaling-of-the-dft/">GitHub Pages</a>.</span></div>
+<div style="text-align:center"><span>Please make sure that you read this on <a href="https://appliedacousticschalmers.github.io/scaling-of-the-dft/">GitHub Pages</a>.</span><p /></div>
 
 
 

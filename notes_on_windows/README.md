@@ -49,13 +49,15 @@ These plots were obtained by connecting all spectral magnitudes that occur at in
 The short answer is: The left hand plot in Fig. [2](#fig2) is a special case where the frequency of the sine whose spectrum we are looking at corresponds to one of the basis functions of the DFT (some may call this "It is exactly in the center of a bin $$k$$."). 
 
 Recall the definition of the DFT:
+
 $$
 \tag{1}\label{eq:dft}
     X(k) = \sum_{n=0}^{N-1} x(n) \ {\mathrm e}^{-{\mathrm i} \frac{2\pi k}{N}n}
 $$
-It happens so that if the frequency of a sine is exactly in the center of a bin $$k_0$$ of the DFT $\eqref{eq:dft}$, there will be a complex exponential $${\mathrm e}^{-{\mathrm i} \frac{2\pi k}{N}n}$$ that will oscillate at the exact same frequency like the sine. In other words, we need only this single basis function (plus the one at $$-k_0$$) of the DFT to represent the sine. The spectral coefficients $$X(k)$$ will be zero for all other $$k$$.
 
-Ok, so far so good. How can we bring the lobes into the game? Usually, the DFT $\eqref{eq:dft}$ is only computed for integer $$k$$ because this covers all of the information. You can actually also evaluate $\eqref{eq:dft}$ for fractional $$k$$ as the spectrum of a time-discrete signal is contiuous[^1]. There is nothing that prevents us from doing this. See [this MATLAB script](main_lobes_rect.m), which produces the following Fig. [3](#fig3), which is identical to Fig. [2](#fig2) but with the DFT $\eqref{eq:dft}$ evaluated also for fractional $$k$$ (gray line). 
+It happens so that if the frequency of a sine is exactly in the center of a bin $$k_0$$ of the DFT \eqref{eq:dft}, there will be a complex exponential $${\mathrm e}^{-{\mathrm i} \frac{2\pi k}{N}n}$$ that will oscillate at the exact same frequency like the sine. In other words, we need only this single basis function (plus the one at $$-k_0$$) of the DFT to represent the sine. The spectral coefficients $$X(k)$$ will be zero for all other $$k$$.
+
+Ok, so far so good. How can we bring the lobes into the game? Usually, the DFT \eqref{eq:dft} is only computed for integer $$k$$ because this covers all of the information. You can actually also evaluate \eqref{eq:dft} for fractional $$k$$ as the spectrum of a time-discrete signal is continuous[^1]. There is nothing that prevents us from doing this. See [this MATLAB script](main_lobes_rect.m), which produces the following Fig. [3](#fig3), which is identical to Fig. [2](#fig2) but with the DFT \eqref{eq:dft} evaluated also for fractional $$k$$ (gray line). 
 
 
 
@@ -117,7 +119,7 @@ To close the loop, we're getting back to the example from Fig. [1](#fig1) in the
 
 
 
-   Fig. 6<a name="fig6"></a>: XXX
+   Fig. 6<a name="fig6"></a>: Same like Fig. [1](#fig1) but with a flat top window applied
 
 No matter what the frequency of the sine is, we can deduce that its amplitude is $$0$$ dB or equivalently $$1$$. Recall that we are looking at [single-sided amplitude spectra](https://appliedacousticschalmers.github.io/scaling-of-the-dft/AES2020_eBrief/).
 

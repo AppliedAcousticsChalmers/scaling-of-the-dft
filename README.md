@@ -6,11 +6,12 @@
 
 
 
-<div style="text-align:center"><span>Please make sure that you read this on <a href="https://appliedacousticschalmers.github.io/scaling-of-the-dft/">Github Pages</a>.</span></div>
+<div style="text-align:center"><span>Please make sure that you read this on <a href="https://appliedacousticschalmers.github.io/scaling-of-the-dft/">GitHub Pages</a>.</span></div>
 
 
 
 This repository collects educational materials on the Discrete Fourier Transform. For now, you'll find:
 
 * J. Ahrens, C. Andersson, P. Höstmad, W. Kropp, "[Tutorial on Scaling of the Discrete Fourier Transform and the Implied Physical Units of the Spectra of Time-Discrete Signals](AES2020_eBrief/README.md)," in 148th Convention of the AES, e-Brief 56, May 2020.
+* J. Ahrens, "[Some Notes on Windows in Spectral Analysis](notes_on_windows/README.md)", which is a short article about the usefulness of flat top windows.
 

@@ -41,7 +41,7 @@ spec(2:end-1) = 2 * spec(2:end-1);
 f = linspace(0, fs/2, length(spec)).';
 
 % now do the plotting
-figure('Color', [1, 1, 1], 'Position', [500 500 380 200]);
+figure('Color', [242, 242, 242]/255, 'Position', [500 500 380 200]);
 
 % -------------- now do the plotting --------------
 subplot(1, 2, 1);
@@ -89,5 +89,8 @@ grid on;
 xlabel('Frequency (Hz)', 'interpreter', 'latex');
 
 ylabel('$10\log_{10} |\underline{\overline{\overline{X}}}_\mathrm{SS}(k)|$ re.~1 V$^2$/Hz', 'interpreter', 'latex');
+
+% make sure that background color is preserved when saving
+set(gcf, 'InvertHardCopy', 'off');
 
 %saveas(gcf, 'fig_4.png');

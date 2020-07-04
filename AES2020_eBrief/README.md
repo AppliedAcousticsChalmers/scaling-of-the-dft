@@ -23,7 +23,7 @@ The combination of the time-discrete property of digital signals together with t
 
 The Fourier transform (FT) is one of the most common mathematical operations in acoustics and audio. Definitions for continuous signals (CFT) as well as for discrete signals (DFT) exist. When speaking of a discrete signal, we refer to a signal that exhibits a dependency on a discrete variable such as time or space. We assume the instantaneous amplitude of the signal to be known with infinite accuracy. 
 
-Discrete signals require a somewhat different treatment than continuous ones because discrete signals are not physical. One aspect with which this becomes evident is interpreting the magnitude of the spectrum of a discrete signal, which is greatly facilitated when the spectrum is scaled. Although the scaling methods that we present here are widely known, we are not aware of a compact resource that summarizes the important information in an educational manner. This tutorial aims at filling this gap. Our treatment will be simplifying in a latent manner in the sense that we leave out certain less tangible details of the matter and focus on the fundamental concepts. We refer the reader to the references based on which we compiled this tutorial [[1](#[1])], [[2](#[2]), Sec. 4.2] [[3](#[3]), Ch. 4], [[4](#[4]), Ch. 6] and to the supplementary materials that we provide s\cite{github_scaling}. For ease of compactness, we omit stating proofs.
+Discrete signals require a somewhat different treatment than continuous ones because discrete signals are not physical. One aspect with which this becomes evident is interpreting the magnitude of the spectrum of a discrete signal, which is greatly facilitated when the spectrum is scaled. Although the scaling methods that we present here are widely known, we are not aware of a compact resource that summarizes the important information in an educational manner. This tutorial aims at filling this gap. Our treatment will be simplifying in a latent manner in the sense that we leave out certain less tangible details of the matter and focus on the fundamental concepts. We refer the reader to the references based on which we compiled this tutorial [[1](#[1])], [[2](#[2]), Sec. 4.2] [[3](#[3]), Ch. 4], [[4](#[4]), Ch. 6] and to the supplementary materials that we provide \cite{github_scaling}. For ease of compactness, we omit stating proofs.
 
 After a brief excursion to the CFT in Sec. [2](#sec:cft), scaling options for the DFT are presented in Sec. [3.1](#sec:scaling_tones) and [3.2](#sec:scaling_broadband). Sec. [3.3](sec:single-sided) introduces the concept single-sided spectra, which the scaling approach requires to produce a representation of the spectrum that can be interpreted conveniently. Examples are presented. Further aspects are discussed in Sec. [4](#sec:windowing) and [5](#sec:closing_remarks).
 
@@ -79,7 +79,7 @@ yields an _amplitude spectrum_, i.e. a spectrum $$X(\omega)$$ whose implied unit
 
 
 
-<img src="fig_1.png" alt="fig_1" title="fig_1" style="zoom:60%;" />
+<img src="fig_1.png" alt="fig_1" title="fig_1" border="0" align="center" style="zoom:60%;" />
 
 
 
@@ -153,7 +153,7 @@ To highlight the usefulness of the single-sided representation, Fig. [2](#fig2) 
 
 
 
-<img src="fig_2.png" alt="fig_2" title="fig_2" style="zoom:60%;" />
+<img src="fig_2.png" alt="fig_2" title="fig_2" border="0" align="center" style="zoom:60%;" />
 
 
 
@@ -165,7 +165,7 @@ However, the picture is very different when interpreting amplitude spectra of br
 
 
 
-<img src="fig_3.png" alt="fig_3" title="fig_3" style="zoom:60%;" />
+<img src="fig_3.png" alt="fig_3" title="fig_3" border="0" align="center" style="zoom:60%;" />
 
 
 
@@ -177,7 +177,7 @@ When the analysis of the noise in the signal from Fig. [3](#fig3) is of interest
 
 
 
-<img src="fig_4.png" alt="fig_4" title="fig_4" style="zoom:60%;" />
+<img src="fig_4.png" alt="fig_4" title="fig_4" border="0" align="center" style="zoom:60%;" />
 
 
 
@@ -265,6 +265,7 @@ $$
 \tag{15}\label{eq:k}
     f(k) = \frac{k}{N}\cdot f_\text{s}  \ \ \ \forall \ 0 \leq k \leq N/2 \, .
 $$
+
 Eq. \eqref{eq:k} was used in all figures in this paper that depict spectra to express the horizontal axis in Hz.
 
 

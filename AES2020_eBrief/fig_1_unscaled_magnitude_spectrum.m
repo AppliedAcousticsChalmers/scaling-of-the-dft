@@ -23,7 +23,7 @@ spec(2:end-1) = 2*spec(2:end-1);
 f = linspace(0, fs/2, length(spec)).';
 
 % do the plotting
-figure('Color', [1, 1, 1], 'Position', [500 500 380 140]);
+figure('Color', [242, 242, 242]/255, 'Position', [500 500 380 140]);
 
 subplot(1, 2, 1);
 
@@ -60,4 +60,7 @@ grid on;
 xlabel('Frequency (Hz)', 'interpreter', 'latex');
 ylabel('$\left|X(k)\right|$', 'interpreter', 'latex');
 
-%saveas(gcf, 'fig_1.png');
+% make sure that background color is preserved when saving
+set(gcf, 'InvertHardCopy', 'off'); 
+
+saveas(gcf, 'fig_1.png');

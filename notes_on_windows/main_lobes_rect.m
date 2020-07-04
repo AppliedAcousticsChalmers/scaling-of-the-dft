@@ -43,7 +43,7 @@ spec_1 = 2 * spec_1;
 spec_2 = 2 * spec_2;
 
 % ----------------- Plot everything in a simple way -----------------------
-figure('Color', [1, 1, 1], 'Position', [500 500 500 200]);
+figure('Color', [242, 242, 242]/255, 'Position', [500 500 500 200]);
 
 subplot(1, 2, 1);
 
@@ -68,10 +68,13 @@ grid on;
 xlabel('$k$', 'interpreter', 'latex');
 ylabel('$\left|\overline{X}_{\mathrm{SS}}(k)\right|$', 'interpreter', 'latex');
 
-% saveas(gcf, 'fig_2a.png');
+% make sure that background color is preserved when saving
+set(gcf, 'InvertHardCopy', 'off');
+
+%saveas(gcf, 'fig_2a.png');
 
 % ------------ Plot everything in a differentiated way --------------------
-figure('Color', [1, 1, 1], 'Position', [500 500 500 200]);
+figure('Color', [242, 242, 242]/255, 'Position', [500 500 500 200]);
 
 subplot(1, 2, 1);
 
@@ -101,5 +104,8 @@ grid on;
 xlabel('$k$', 'interpreter', 'latex');
 ylabel('$\left|\overline{X}_{\mathrm{SS}}(k)\right|$', 'interpreter', 'latex');
 
-% saveas(gcf, 'fig_2b.png');
+% make sure that background color is preserved when saving
+set(gcf, 'InvertHardCopy', 'off'); 
+
+%saveas(gcf, 'fig_2b.png');
 

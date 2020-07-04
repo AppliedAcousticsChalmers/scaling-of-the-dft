@@ -53,7 +53,7 @@ spec_12 = 2 * spec_12;
 spec_22 = 2 * spec_22;
 
 % ------------------------- Plot everything -------------------------------
-figure('Color', [1, 1, 1], 'Position', [500 500 500 200]);
+figure('Color', [242, 242, 242]/255, 'Position', [500 500 500 200]);
 
 subplot(1, 2, 1);
 
@@ -95,6 +95,9 @@ ylim([-.1 1.1]);
 grid on;
 xlabel('$k$', 'interpreter', 'latex');
 ylabel('$\left|\overline{X}_{w,\mathrm{SS}}(k)\right|$', 'interpreter', 'latex');
+
+% make sure that background color is preserved when saving
+set(gcf, 'InvertHardCopy', 'off'); 
 
 %saveas(gcf, 'fig_4.png');
 
